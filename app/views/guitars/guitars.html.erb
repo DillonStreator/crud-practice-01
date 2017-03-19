@@ -1,0 +1,9 @@
+<a href="/guitars/new">Add new guitar</a>
+<h1>All guitars</h1>
+<%= @guitars.each do |guitar| %>
+  <h3><a href="/guitars/show/<%= guitar.id %>"><%= guitar.name %></a></h3>
+  <p>String: <%= guitar.strings %></p>
+  <img class="index-image" src="<%= guitar.image %>">
+  <p>Description: <%= guitar.description %></p>
+  <p>---------------</p>
+<% end %>

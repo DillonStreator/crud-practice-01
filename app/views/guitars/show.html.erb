@@ -1,0 +1,9 @@
+<a href="/guitars">back to all guitars</a>
+<h1><%= @guitar.name%></h1>
+<img class="show-image" src="<%= @guitar.image%>">
+<p>Strings: <%= @guitar.strings%></p>
+<p>Description: <%= @guitar.description%></p>
+<a href="/guitars/<%= @guitar.id %>/edit">Edit</a>
+<%= form_tag "/guitars/#{@guitar.id}/destroy", method: :delete do %>
+  <input type="submit" value="Delete">
+<% end %>
